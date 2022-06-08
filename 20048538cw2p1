@@ -1,0 +1,535 @@
+Script started on 2022-04-22 11:30:43+05:45 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="104" LINES="49"]
+swechha@SwechhaSharma: ~$ PS1='$PWD>'
+/home/swechha>mkdir -p IPL/{"Mumbai Indians",KKR,Punjab,"Rajasthan Royals",RCB}
+/home/swechha>pwd
+/home/swechha
+/home/swechha>ls
+20048538cw2p1  IPL
+/home/swechha>cd IPL
+/home/swechha/IPL>ls
+KKR "Mumbai Indians" Punjab "Rajasthan Royals" RCB
+/home/swechha/IPL>tree
+├── KKR
+├── Mumbai Indians
+├── Punjab
+├── Rajasthan Royals
+└── RCB
+
+5 directories, 0 files
+/home/swechha/IPL>cd KKR
+/home/swechha/IPL/KKR>pwd
+/home/swechha/IPL/KKR
+/home/swechha/IPL/KKR>touch file1 file2
+/home/swechha/IPL/KKR>ls
+file1  file2
+/home/swechha/IPL/KKR>cd ..
+/home/swechha/IPL>pwd
+/home/swechha/IPL
+/home/swechha/IPL>rm -i -r KKR
+rm: descend into directory 'KKR'? y
+rm: remove regular empty file 'KKR/file2'? y
+rm: remove regular empty file 'KKR/file1'? y
+rm: remove directory 'KKR'? n
+/home/swechha/IPL>ls
+
+KKR "Mumbai Indians" Punjab "Rajasthan Royals" RCB
+/home/swechha/IPL>echo $'Hello! I am a big fan of IPL.\'n' 14 < (2+2)'
+Hello! I am a big fan of IPL. 
+ 14 < (2+2)
+/home/swechha/IPL>pwd
+/home/swechha/IPL
+/home/swechha/IPL>cd KKR
+/home/swechha/IPL/KKR>pwd
+/home/swechha/IPL/KKR
+/home/swechha/IPL/KKR>pwd; cd; pwd
+/home/swechha/IPL/KKR
+/home/swechha
+/home/swechha>cd IPL/KKR
+/home/swechha/IPL/KKR>pwd; cd ..; pwd; cd ..; pwd
+/home/swechha/IPL/KKR
+/home/swechha/IPL
+/home/swechha
+/home/swechha>cd; pwd
+/home/swechha
+/home/swechha>ls
+20048538cw2p1  IPL
+/home/swechha>ls -a
+20048538cw2p1  .bash_history  .bash_logout  .bashrc  IPL  .profile
+/home/swechha>ls -al
+total 28
+drwxr-xr-x 3 swechha swechha 4096 Apr 22 11:32 .
+drwxr-xr-x 3 root    root    4096 Apr 22 11:10 ..
+-rw-r--r-- 1 swechha swechha    0 Apr 22 11:30 20048538cw2p1
+-rw------- 1 swechha swechha  121 Apr 22 11:30 .bash_history
+-rw-r--r-- 1 swechha swechha  220 Apr 22 11:10 .bash_logout
+-rw-r--r-- 1 swechha swechha 3526 Apr 22 11:10 .bashrc
+drwxr-xr-x 7 swechha swechha 4096 Apr 22 11:32 IPL
+-rw-r--r-- 1 swechha swechha  807 Apr 22 11:10 .profile
+/home/swechha>cd; pwd; cd; pwd
+/home/swechha
+/home/swechha
+/home/swechha>ls -R
+.:
+20048538cw2p1  IPL
+
+./IPL:
+ KKR "Mumbai Indians" Punjab "Rajasthan Royals" RCB
+
+./IPL/KKR:
+
+'./IPL/Mumbai Indians':
+
+./IPL/Punjab:
+
+'./IPL/Rajasthan Royals':
+
+./IPL/RCB:
+/home/swechha>cd IPL/RCB
+/home/swechha/IPL/RCB>cat > testX
+aaabb Aaaaa
+AAAAA
+bbbcc Bbbbb
+BBBBB
+ff-ff Ccccc
+CCCCC
+cccdd Ddddd
+DDDDD
+/home/swechha/IPL/RCB>cat > testY
+aaabb Aaaaa
+AAAAA
+bbbcc Bbbbb
+BBBBB
+ff-ff Ccccc
+CCCCC
+cccdd Ddddd
+DDDDD
+/home/swechha/IPL/RCB>cat >testZ[K[K[K[K[K testZ
+aaabb Aaaaa
+AAAAA
+bbbcc Bbbbb
+BBBBB
+ff-ff Ccccc
+CCCCC
+cccdd Ddddd
+DDDDD
+/home/swechha/IPL/RCB>cat testX
+aaabb Aaaaa
+AAAAA
+bbbcc Bbbbb
+BBBBB
+ff-ff Ccccc
+CCCCC
+cccdd Ddddd
+DDDDD
+/home/swechha/IPL/RCB>cat testY
+aaabb Aaaaa
+AAAAA
+bbbcc Bbbbb
+BBBBB
+ff-ff Ccccc
+CCCCC
+cccdd Ddddd
+DDDDD
+/home/swechha/IPL/RCB>cat testZ
+aaabb Aaaaa
+AAAAA
+bbbcc Bbbbb
+BBBBB
+ff-ff Ccccc
+CCCCC
+cccdd Ddddd
+DDDDD
+/home/swechha/IPL/RCB>cp tstX testY testZ ../"Rajasthan Royals"
+cp: cannot stat 'tstX': No such file or directory
+/home/swechha/IPL/RCB>cp testX testY testZ ../"Rajasthan Royals"
+/home/swechha/IPL/RCB>cd ..
+/home/swechha/IPL>cd "Rajasthan Royals"
+/home/swechha/IPL/Rajasthan Royals>ls
+testX  testY  testZ
+/home/swechha/IPL/Rajasthan Royals>cd ..
+/home/swechha/IPL>cd RCB
+/home/swechha/IPL/RCB>cat testX testY testZ
+aaabb Aaaaa
+AAAAA
+bbbcc Bbbbb
+BBBBB
+ff-ff Ccccc
+CCCCC
+cccdd Ddddd
+DDDDD
+aaabb Aaaaa
+AAAAA
+bbbcc Bbbbb
+BBBBB
+ff-ff Ccccc
+CCCCC
+cccdd Ddddd
+DDDDD
+aaabb Aaaaa
+AAAAA
+bbbcc Bbbbb
+BBBBB
+ff-ff Ccccc
+CCCCC
+cccdd Ddddd
+DDDDD
+/home/swechha/IPL/RCB>cat testX testY testZ >> testResult
+/home/swechha/IPL/RCB>cat testResult
+aaabb Aaaaa
+AAAAA
+bbbcc Bbbbb
+BBBBB
+ff-ff Ccccc
+CCCCC
+cccdd Ddddd
+DDDDD
+aaabb Aaaaa
+AAAAA
+bbbcc Bbbbb
+BBBBB
+ff-ff Ccccc
+CCCCC
+cccdd Ddddd
+DDDDD
+aaabb Aaaaa
+AAAAA
+bbbcc Bbbbb
+BBBBB
+ff-ff Ccccc
+CCCCC
+cccdd Ddddd
+DDDDD
+/home/swechha/IPL/RCB>cat test[XYZ]
+aaabb Aaaaa
+AAAAA
+bbbcc Bbbbb
+BBBBB
+ff-ff Ccccc
+CCCCC
+cccdd Ddddd
+DDDDD
+aaabb Aaaaa
+AAAAA
+bbbcc Bbbbb
+BBBBB
+ff-ff Ccccc
+CCCCC
+cccdd Ddddd
+DDDDD
+aaabb Aaaaa
+AAAAA
+bbbcc Bbbbb
+BBBBB
+ff-ff Ccccc
+CCCCC
+cccdd Ddddd
+DDDDD
+/home/swechha/IPL/RCB>ls -l
+total 16
+-rw-r--r-- 1 swechha swechha 216 Apr 22 11:50 testResult
+-rw-r--r-- 1 swechha swechha  72 Apr 22 11:40 testX
+-rw-r--r-- 1 swechha swechha  72 Apr 22 11:42 testY
+-rw-r--r-- 1 swechha swechha  72 Apr 22 11:44 testZ
+/home/swechha/IPL/RCB>chmod -rwx testX
+/home/swechha/IPL/RCB>ls -l testX
+---------- 1 swechha swechha 72 Apr 22 11:40 testX
+/home/swechha/IPL/RCB>cat testX
+cat: testX: Permission denied
+/home/swechha/IPL/RCB>cat >> testX
+bash: testX: Permission denied
+/home/swechha/IPL/RCB>chmod u+rw testX
+/home/swechha/IPL/RCB>ls -l testX
+-rw------- 1 swechha swechha 72 Apr 22 11:40 testX
+/home/swechha/IPL/RCB>cat testX
+aaabb Aaaaa
+AAAAA
+bbbcc Bbbbb
+BBBBB
+ff-ff Ccccc
+CCCCC
+cccdd Ddddd
+DDDDD
+/home/swechha/IPL/RCB>cat >> testX
+Hello World!!
+/home/swechha/IPL/RCB>CD ..
+bash: CD: command not found
+/home/swechha/IPL/RCB>cd ..
+/home/swechha/IPL>pwd
+/home/swechha/IPL
+/home/swechha/IPL>ls -ldg RCB
+drwxr-xr-x 2 swechha 4096 Apr 22 11:50 RCB
+/home/swechha/IPL>chmod a -rwx RCB
+/home/swechha/IPL>ls -ld RCB
+d--------- 2 swechha swechha 4096 Apr 22 11:50 RCB
+/home/swechha/IPL>cat RCB/testX
+cat: RCB/testX: Permission denied
+/home/swechha/IPL>touch RCB/file1
+touch: cannot touch 'RCB/file1': Permission denied
+/home/swechha/IPL>ls RCB
+ls: cannot open directory 'RCB': Permission denied
+/home/swechha/IPL>chmod u+rwx RCB
+/home/swechha/IPL>ls -ld RCB
+drwx------ 2 swechha swechha 4096 Apr 22 11:50 RCB
+/home/swechha/IPL>cat RCB/testX
+aaabb Aaaaa
+AAAAA
+bbbcc Bbbbb
+BBBBB
+ff-ff Ccccc
+CCCCC
+cccdd Ddddd
+DDDDD
+Hello World!!
+/home/swechha/IPL>touch RCB/file1
+/home/swechha/IPL>ls RCB
+file1  testResult  testX  testY  testZ
+/home/swechha/IPL>cd "Rajasthan Royals"
+/home/swechha/IPL/Rajasthan Royals> grep bb testX
+aaabb Aaaaa
+bbbcc Bbbbb
+/home/swechha/IPL/Rajasthan Royals>grep -v bb testX
+AAAAA
+BBBBB
+ff-ff Ccccc
+CCCCC
+cccdd Ddddd
+DDDDD
+/home/swechha/IPL/Rajasthan Royals>grep -n testX
+/home/swechha/IPL/Rajasthan Royals>grep -n bb testX
+1:aaabb Aaaaa
+3:bbbcc Bbbbb
+/home/swechha/IPL/Rajasthan Royals>grep -l bb *
+testX
+testY
+testZ
+/home/swechha/IPL/Rajasthan Royals>grep -i bb *
+testX:aaabb Aaaaa
+testX:bbbcc Bbbbb
+testX:BBBBB
+testY:aaabb Aaaaa
+testY:bbbcc Bbbbb
+testY:BBBBB
+testZ:aaabb Aaaaa
+testZ:bbbcc Bbbbb
+testZ:BBBBB
+/home/swechha/IPL/Rajasthan Royals>grep -i BB *
+testX:aaabb Aaaaa
+testX:bbbcc Bbbbb
+testX:BBBBB
+testY:aaabb Aaaaa
+testY:bbbcc Bbbbb
+testY:BBBBB
+testZ:aaabb Aaaaa
+testZ:bbbcc Bbbbb
+testZ:BBBBB
+/home/swechha/IPL/Rajasthan Royals>grep -c bb *
+testX:2
+testY:2
+testZ:2
+/home/swechha/IPL/Rajasthan Royals>grep '^A' *
+testX:AAAAA
+testY:AAAAA
+testZ:AAAAA
+/home/swechha/IPL/Rajasthan Royals>grep -n '^' testX
+1:aaabb Aaaaa
+2:AAAAA
+3:bbbcc Bbbbb
+4:BBBBB
+5:ff-ff Ccccc
+6:CCCCC
+7:cccdd Ddddd
+8:DDDDD
+/home/swechha/IPL/Rajasthan Royals>cd ..
+/home/swechha/IPL>cd ..
+/home/swechha>alias lsl='ls -l'
+/home/swechha>alias lsR='ls -R'
+/home/swechha>alias lsl
+alias lsl='ls -l'
+/home/swechha>alias lsR
+alias lsR='ls -R'
+/home/swechha>lsl
+total 12
+-rw-r--r-- 1 swechha swechha 8192 Apr 22 11:59 20048538cw2p1
+drwxr-xr-x 7 swechha swechha 4096 Apr 22 11:32 IPL
+/home/swechha>lsR
+.:
+20048538cw2p1  IPL
+
+./IPL:
+ KKR "Mumbai Indians" Punjab "Rajasthan Royals" RCB
+
+./IPL/KKR:
+
+'./IPL/Mumbai Indians':
+
+./IPL/Punjab:
+
+'./IPL/Rajasthan Royals':
+testX  testY  testZ
+
+./IPL/RCB:
+file1  testResult  testX  testY  testZ
+/home/swechha>unalias lsl
+/home/swechha>unalias lsR
+/home/swechha>alias lsl
+bash: alias: lsl: not found
+/home/swechha>alias lsR
+bash: alias: lsR: not found
+/home/swechha>cat >> .bashrc
+alias lsl='ls -l'
+alias lsR='ls -R'
+/home/swechha>source .bashrc
+swechha@SwechhaSharma: ~$ lsl
+total 12
+-rw-r--r-- 1 swechha swechha 8192 Apr 22 11:59 20048538cw2p1
+drwxr-xr-x 7 swechha swechha 4096 Apr 22 11:59 IPL
+swechha@SwechhaSharma: ~$ lsR
+.:
+20048538cw2p1  IPL
+
+./IPL:
+KKR  'Mumbai Indians' Punjab 'Rajasthan Royals' RCB
+
+./IPL/KKR:
+
+'./IPL/Mumbai Indians':
+
+./IPL/Punjab:
+
+'./IPL/Rajasthan Royals':
+testX  testY  testZ
+
+./IPL/RCB:
+file1  testResult  testX  testY  testZ
+swechha@SwechhaSharma: ~$ cat >> .bashrc
+
+alias noAllf="ls -al | grep '^-'| wc -l"
+alias noAsubsir="ls -lRa | grep '^d' | wc -l"
+alias noAcs ="ls -Rp | grep -v / | grep '^[gtw]' | wc -l"
+swechha@SwechhaSharma: ~$ source .bashrc
+swechha@SwechhaSharma: ~$ noAllf
+5
+swechha@SwechhaSharma: ~$ noAsubsir
+20
+swechha@SwechhaSharma: ~$ noAcs
+7
+swechha@SwechhaSharma: ~$ history
+    1  tree
+    2  sudo apt install tree
+    3  tree
+    4  sudo apt tree install
+    5  sudo apt update
+    6  sudo apt install tree
+    7  tree
+    8  exit
+    9  20048538cw2p1
+   10  exit
+   11  PS1='$PWD>'
+   12  mkdir -p IPL/{"Mumbai Indians",KKR,Punjab,"Rajasthan Royals",RCB}
+   13  pwd
+   14  ls
+   15  cd IPL
+   16  ls
+   17  tree
+   18  cd KKR
+   19  pwd
+   20  touch file1 file2
+   21  ls
+   22  cd ..
+   23  pwd
+   24  rm -i -r KKR
+   25  ls
+   26  echo $'Hello! I am a big fan of IPL. \n 14 < (2+2)'
+   27  pwd
+   28  cd KKR
+   29  pwd
+   30  pwd; cd; pwd
+   31  cd IPL/KKR
+   32  pwd; cd ..; pwd; cd ..; pwd
+   33  cd; pwd
+   34  ls
+   35  ls -a
+   36  ls -al
+   37  cd; pwd; cd; pwd
+   38  ls -R
+   39  cd IPL/RCB
+   40  cat > testX
+   41  cat > testY
+   42  cat > testZ
+   43  cat testX
+   44  cat testY
+   45  cat testZ
+   46  cp tstX testY testZ ../"Rajasthan Royals"
+   47  cp testX testY testZ ../"Rajasthan Royals"
+   48  cd ..
+   49  cd "Rajasthan Royals"
+   50  ls
+   51  cd ..
+   52  cd RCB
+   53  cat testX testY testZ
+   54  cat testX testY testZ >> testResult
+   55  cat testResult
+   56  cat test[XYZ]
+   57  ls -l
+   58  chmod -rwx testX
+   59  ls -l testX
+   60  cat testX
+   61  cat >> testX
+   62  chmod u+rw testX
+   63  ls -l testX
+   64  cat testX
+   65  cat >> testX
+   66  CD ..
+   67  cd ..
+   68  pwd
+   69  ls -ldg RCB
+   70  chmod -rwx RCB
+   71  ls -ld RCB
+   72  cat RCB/testX
+   73  touch RCB/file1
+   74  ls RCB
+   75  chmod u+rwx RCB
+   76  ls -ld RCB
+   77  cat RCB/testX
+   78  touch RCB/file1
+   79  ls RCB
+   80  cd "Rajasthan Royals"
+   81  grep -v bb testX
+   82  grep -n testX
+   83  grep -n bb testX
+   84  grep -l bb *
+   85  grep -i bb *
+   86  grep -i BB *
+   87  grep -c bb *
+   88  grep '^A' *
+   89  grep -n '^' testX
+   90  cd ..
+   91  alias lsl='ls -l'
+   92  alias lsR='ls -R'
+   93  alias lsl
+   94  alias lsR
+   95  lsl
+   96  lsR
+   97  unalias lsl
+   98  unalias lsR
+   99  alias lsl
+  100  alias lsR
+  101  cat >> .bashrc
+  102  source .bashrc
+  103  lsl
+  104  lsR
+  105  cat >> .bashrc
+  106  source .bashrc
+  107  noAllf
+  108  noAsubsir
+  109  noAcs
+  110  history
+swechha@SwechhaSharma: ~$ !-6
+cat >> .bashrc
+swechha@SwechhaSharma: ~$ !i
+bash: !i: event not found
+swechha@SwechhaSharma: ~$ exit
+
+exit
+
+Script done on 2022-04-22 12:40:32+05:45 [COMMAND_EXIT_CODE="0"]
